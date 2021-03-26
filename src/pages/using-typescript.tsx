@@ -1,9 +1,7 @@
 // If you don't want to use TypeScript you can delete this file!
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import {Page,SEO} from "../components"
 
 type DataProps = {
   site: {
@@ -12,7 +10,7 @@ type DataProps = {
 }
 
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
-  <Layout>
+  <Page>
     <SEO title="Using TypeScript" />
     <h1>Gatsby supports TypeScript by default!</h1>
     <p>
@@ -36,7 +34,8 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       .
     </p>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"></link>
+  </Page>
 )
 
 export default UsingTypescript
